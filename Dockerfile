@@ -3,6 +3,7 @@ From alpine:3.5
 MAINTAINER Jimin Huang "huangjimin@whu.edu.cn"
 
 ENV PACKAGES="\
+    dumb-init \
     bash \
     git \
     python \
@@ -17,6 +18,7 @@ RUN apk add --no-cache $PACKAGES && \
 
 RUN pip install nose
 
-RUN nosetests -sv
+VOLUME ["/code"]
+WORKDIR code
 
-ENTRYPOINT nosetests -sv
+ENTRYPOINT dumb_init
