@@ -15,6 +15,6 @@ RUN apk add --no-cache $PACKAGES && \
     pip install --upgrade pip setuptools && \
     rm -r /root/.cache
 
-RUN pip install nose -y
+RUN pip install nose
 
 ENTRYPOINT nosetests -sv
