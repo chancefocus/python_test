@@ -21,4 +21,4 @@ RUN pip install nose
 VOLUME ["/code"]
 WORKDIR code
 
-ENTRYPOINT dumb_init
+ENTRYPOINT dumb-init
