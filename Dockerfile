@@ -8,6 +8,7 @@ ENV PACKAGES="\
     git \
     python \
     python-dev \
+    ssh \
 "
 
 RUN apk add --no-cache $PACKAGES && \
