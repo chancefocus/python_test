@@ -16,8 +16,7 @@ RUN apk update && \
     apk add --update --no-cache $PACKAGES && \
     python -m ensurepip && \
     rm -r /usr/lib/python*/ensurepip && \
-    pip install --upgrade pip setuptools && \
-    pip install nose \
+    pip install --upgrade pip setuptools nose && \
     rm -r /root/.cache && \
 
 VOLUME ["/code"]
