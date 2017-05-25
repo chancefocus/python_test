@@ -22,4 +22,4 @@ RUN apk add --no-cache $PACKAGES && \
 VOLUME ["/code"]
 WORKDIR code
 
-ENTRYPOINT dumb_init
+ENTRYPOINT dumb-init
