@@ -9,15 +9,15 @@ ENV PACKAGES="\
     python \
     python-dev \
     ssh \
+    mysql-dev \
 "
 
 RUN apk add --no-cache $PACKAGES && \
     python -m ensurepip && \
     rm -r /usr/lib/python*/ensurepip && \
     pip install --upgrade pip setuptools && \
-    rm -r /root/.cache
-
-RUN pip install nose
+    pip install nose \
+    rm -r /root/.cache && \
 
 VOLUME ["/code"]
 WORKDIR code
