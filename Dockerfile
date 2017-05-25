@@ -8,7 +8,7 @@ ENV PACKAGES="\
     git \
     python \
     python-dev \
-    ssh \
+    openssh \
     mysql-dev \
 "
 
