@@ -9,8 +9,7 @@ ENV PACKAGES="\
     python \
     python-dev \
     openssh \
-    mysql-dev \
-    gcc \
+    py-mysqldb \
 "
 
 RUN apk update && \
